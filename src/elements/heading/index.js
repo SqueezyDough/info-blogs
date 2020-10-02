@@ -4,7 +4,12 @@ import PropTypes from 'prop-types'
 
 import { baseStyling, fontFamily, fontSize } from './styles'
 
-const StyledHeading = styled.div`
+const Header = ({ className, as = 'h1', ...props }) => (
+  <div className={className} as={as} {...props} />
+)
+
+export default styled(Header)`
+  ${baseStyling}
   ${({ as }) => {
     return css`
       font-family: ${fontFamily(as)}
@@ -13,12 +18,6 @@ const StyledHeading = styled.div`
   }}
 `
 
-const Heading = ({ as = 'h1', ...props }) => (
-  <StyledHeading as={as} {...props} />
-)
-
-export default Heading
-
-Heading.propTypes = {
+Header.propTypes = {
   as: PropTypes.string.isRequired
 }

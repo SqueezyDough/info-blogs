@@ -26,6 +26,16 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-module-resolver',
+      options: {
+        root: './src',
+        aliases: {
+          components: './components',
+          elements: './elements'
+        }
+      }
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [

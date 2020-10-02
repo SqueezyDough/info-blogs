@@ -1,5 +1,5 @@
 import React from 'react'
-import Heading from '../../elements/heading'
+import Heading from 'elements/heading'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 

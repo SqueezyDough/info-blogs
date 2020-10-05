@@ -1,40 +1,34 @@
-const stroke = {
-  width: '5rem'
-}
+import { theme } from 'theme'
 
 export const baseStyling = `
   position: relative;
-  box-sizing: border-box;
   height: 30rem;
 
-  .stroke__end {
+  .stroke {
     display: block;
     width: 100%;
-    height: ${stroke.width};
-    background-color: red;
-    border-radius: ${stroke.width} ${stroke.width} 0 0;
+    height: ${theme.baseStroke.width};
+    border-radius: ${theme.baseStroke.width} ${theme.baseStroke.width} 0 0;
 
-    &::before {
-      content: '';
-      position: absolute;
-      box-sizing: border-box;
-      top: 5rem;
-      right: 5rem;
-      width: 1rem;
-      height: 3rem;
-      border-radius: 0 ${stroke.width} 0 ${stroke.width};
-      box-shadow: 0 -25px 0 0 red;
-    }
-
+    /* vertical stroke */
     &::after {
       content: '';
       position: absolute;
-      box-sizing: border-box;
       right: 0;
-      width: ${stroke.width};
+      width: ${theme.baseStroke.width};
       height: 100%;
-      background-color: red;
-      border-radius: 0 ${stroke.width} 0 ${stroke.width};
+      border-radius: 0 ${theme.baseStroke.width} 0 ${theme.baseStroke.width};
+    }
+
+    /* inner corner rounding */
+    &::before {
+      content: '';
+      position: absolute;
+      top: ${theme.baseStroke.width};
+      right: ${theme.baseStroke.width};
+      width: 1rem;
+      height: 3rem;
+      border-radius: 0 ${theme.baseStroke.width} 0 ${theme.baseStroke.width};
     }
   }
 `

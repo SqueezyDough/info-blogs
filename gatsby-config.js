@@ -32,7 +32,8 @@ module.exports = {
         root: './src',
         aliases: {
           components: './components',
-          elements: './elements'
+          elements: './elements',
+          theme: './theme'
         }
       }
     },

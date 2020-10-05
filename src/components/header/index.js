@@ -1,7 +1,8 @@
 import React from 'react'
-import Heading from 'elements/heading'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import Heading from 'elements/heading'
+import Social from 'components/social'
 
 import { baseStyling } from './styles'
 
@@ -12,6 +13,7 @@ const Header = ({ className, title }) => {
         <Heading as='h1'>
           <Link to='/'>{title}</Link>
         </Heading>
+        <Social />
       </div>
     </header>
   )

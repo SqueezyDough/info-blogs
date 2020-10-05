@@ -1,9 +1,6 @@
 import { theme } from 'theme'
 
 export const baseStyling = `
-  position: relative;
-  height: 30rem;
-
   .stroke {
     &.-vertical {
       position: absolute;

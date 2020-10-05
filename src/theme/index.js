@@ -18,6 +18,7 @@ export const theme = {
   transition: '.2s',
 
   baseStroke: {
-    width: '4rem'
+    width: '4rem',
+    halfWidth: '2rem'
   }
 }

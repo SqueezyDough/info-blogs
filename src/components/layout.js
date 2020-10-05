@@ -9,8 +9,11 @@ import Stroke from './stroke'
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+
   const stroke = {
-    color: theme.tertiaryColor
+    color: theme.primaryColor,
+    startVertically: true,
+    reverse: false
   }
 
   let header

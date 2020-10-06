@@ -73,20 +73,22 @@ export default styled(Social)`
   }
 
   .social__anchor {
-    display: inline-block;
-    padding: ${({ theme }) => `${theme.spacingXS} ${theme.spacingM}`};
+    display: flex;
+    box-sizing: content-box;
+    max-width: ${({ theme }) => theme.spacingM};
+    padding: ${({ theme }) => theme.spacingXS};
     background-color: ${({ theme }) => theme.offWhiteLight};
     border-radius:  ${({ theme }) => `0 ${theme.spacingS} ${theme.spacingS}`};
     transition:  ${({ theme }) => theme.transition};
 
     &:hover {
-      background-color: ${({ theme }) => theme.secondaryColor};
+      background-color: ${({ theme }) => theme.tertiaryColor};
       box-shadow: 0 5px 0 0 ${({ theme }) => theme.primaryColor};    
     }
 
     svg {
-      width: 25px;
-      height: 25px;
+      width: 2rem;
+      height: 2rem;
     }
   }
 `

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Stroke from 'components/stroke'
+import Heading from 'elements/heading'
 import { theme } from 'theme'
 import { baseStyling } from './styles'
 
@@ -17,7 +18,9 @@ const BlockHeading = ({ className, title }) => (
   <>
     <div className={className}>
       <Stroke stroke={stroke} />
-      <h2>&mdash; {title}</h2>
+      <Heading as='h2'>
+        &mdash; {title}
+      </Heading>
     </div>
   </>
 )

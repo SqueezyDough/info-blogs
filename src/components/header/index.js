@@ -3,15 +3,19 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Heading from 'elements/heading'
 import Social from 'components/social'
+import Intro from 'components/intro'
 
 import { baseStyling } from './styles'
 
 const Header = ({ className, title }) => {
   return (
-    <header className={className}>  
-      <Heading as='h1'>
-        <Link to='/'>{title}</Link>
-      </Heading>
+    <header className={className}>
+      <div>
+        <Heading as='h1'>
+          <Link to='/'>{title}</Link>
+        </Heading>
+        <Intro />
+      </div>
       <Social />
     </header>
   )

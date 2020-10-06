@@ -1,3 +1,4 @@
+import { theme } from 'theme'
 import { css } from 'styled-components'
 
 export const baseStyling = () => {
@@ -11,13 +12,13 @@ export const baseStyling = () => {
 export const fontFamily = weight => {
   switch (weight) {
     case 'regular':
-      return 'Open Sans Regular'
+      return `${theme.fontDescription}`
     case 'semiBold':
-      return 'Source Sans Pro Semi Bold'
+      return `${theme.fontDescriptionSemi}`
     case 'bold':
-      return 'Source Sans Pro Bold'
+      return `${theme.fontDescriptionBold}`
     default:
-      return 'Open Sans Regular'
+      return `${theme.fontDescription}`
   }
 }
 
@@ -29,6 +30,8 @@ export const fontSize = size => {
       return '14px'
     case 'large':
       return '16px'
+    case 'extraLarge':
+      return '20px'
     default:
       return '14px'
   }

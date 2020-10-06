@@ -35,7 +35,8 @@ module.exports = {
           components: './components',
           elements: './elements',
           theme: './theme',
-          svg: './dev-assets/svg'
+          svg: './dev-assets/svg',
+          fonts: './fonts'
         }
       }
     },

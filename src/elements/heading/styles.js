@@ -1,3 +1,4 @@
+import { theme } from 'theme'
 import { css } from 'styled-components'
 
 export const baseStyling = () => {
@@ -12,30 +13,30 @@ export const baseStyling = () => {
 export const fontFamily = as => {
   switch (as) {
     case 'h1':
-      return 'Avenir Next Pro Bold'
+      return `${theme.fontTitle}`
     case 'h2':
-      return 'Avenir Next Pro Bold'
+      return `${theme.fontTitle}`
     case 'h3':
-      return 'Avenir Next Pro Bold'
+      return `${theme.fontTitle}`
     case 'h4':
-      return 'Avenir Next Pro Bold'
+      return `${theme.fontTitle}`
     case 'h5':
-      return 'Avenir Next Pro Bold'
+      return `${theme.fontTitle}`
     case 'h6':
-      return 'Avenir Next Pro Bold'
+      return `${theme.fontTitle}`
     default:
-      return 'Avenir Next Pro Bold'
+      return `${theme.fontTitle}`
   }
 }
 
 export const fontSize = as => {
   switch (as) {
     case 'h1':
-      return '72px'
-    case 'h2':
       return '64px'
+    case 'h2':
+      return '36px'
     case 'h3':
-      return '48px'
+      return '36px'
     case 'h4':
       return '24px'
     case 'h5':

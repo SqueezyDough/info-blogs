@@ -12,8 +12,8 @@ export default styled(Header)`
   ${baseStyling}
   ${({ as }) => {
     return css`
-      font-family: ${fontFamily(as)}
-      font-size: ${fontSize(as)}
+      font-family: ${fontFamily(as)};
+      font-size: ${fontSize(as)};
     `
   }}
 `

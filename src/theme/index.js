@@ -1,6 +1,8 @@
 export const theme = {
-  fontTitles: "'Noto Serif', serif;",
-  fontDescription: "'Poppins', sans-serif;",
+  fontTitle: 'Metropolis Bold, sans serif',
+  fontDescription: 'Source Sans Pro, sans-serif',
+  fontDescriptionSemi: "'Source Sans Pro Semi', sans-serif;",
+  fontDescriptionBold: "'Source Sans Pro Bold', sans-serif;",
 
   primaryColor: '#07203B',
   secondaryColor: '#55CBD6',

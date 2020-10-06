@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
+import { fonts } from './_fonts'
 
 const GlobalStyle = createGlobalStyle`
+  ${fonts}
+  
   body {
     margin: 0;
     font-family: ${({ theme }) => theme.fontDescription};

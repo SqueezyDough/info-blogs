@@ -1,6 +1,10 @@
 import { theme } from 'theme'
 
 export const baseStyling = `
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
   h1 {
     text-transform: uppercase;
   }

@@ -8,7 +8,8 @@ module.exports = {
     description: 'Blogs I wrote during my internship at INFO',
     siteUrl: 'https://gatsby-starter-blog-demo.netlify.app/',
     social: {
-      github: 'SqueezyDough'
+      github: 'SqueezyDough',
+      linkedin: 'leroy-van-biljouw-0691b01a9'
     }
   },
   plugins: [
@@ -33,7 +34,16 @@ module.exports = {
         aliases: {
           components: './components',
           elements: './elements',
-          theme: './theme'
+          theme: './theme',
+          svg: './dev-assets/svg'
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /dev-assets/
         }
       }
     },

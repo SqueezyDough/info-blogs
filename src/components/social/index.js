@@ -1,17 +1,17 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Image from 'gatsby-image'
+import styled from 'styled-components'
+import Heading from 'elements/heading'
 
-const Social = () => {
+import Avatar from 'svg/icon-bljw.svg'
+import Github from 'svg/icon-github.svg'
+import Linkedin from 'svg/icon-linkedin-alt.svg'
+
+import { baseStyling } from './styles'
+
+const Social = ({ className }) => {
   const data = useStaticQuery(graphql`
     query SocialQuery {
-      avatar: file(absolutePath: { regex: "/avatar.png/" }) {
-        childImageSharp {
-          fixed(width: 100, height: 100, quality: 95) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       site {
         siteMetadata {
           author {
@@ -19,6 +19,7 @@ const Social = () => {
           }
           social {
             github
+            linkedin
           }
         }
       }
@@ -27,28 +28,65 @@ const Social = () => {
 
   const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
-  const avatar = data?.avatar?.childImageSharp?.fixed
 
   return (
-    <div className='social'>
-      {avatar && (
-        <Image
-          fixed={avatar}
-          alt={author?.name || ''}
-          className='bio-avatar'
-        />
+    <div className={className}>
+      {Avatar && (
+        <Avatar className='social__avatar' />
       )}
       {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong>
-          {' '}
-          <a href={`https://github.com/${social?.github || ''}`}>
-            You should follow them on Github
-          </a>
-        </p>
+        <div>
+          <Heading as='h5'>Find me on</Heading>
+          <ul>
+            <li>
+              <a
+                className='social__anchor'
+                href={`https://www.github.com/${social?.github || ''}`}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Github className='social__anchor__github' />
+              </a>
+            </li>
+            <li>
+              <a
+                className='social__anchor'
+                href={`https://www.linkedin.com/in/${social?.linkedin || ''}`}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Linkedin className='social__anchor__linkedin' />
+              </a>
+            </li>
+          </ul>
+        </div>
       )}
     </div>
   )
 }
 
-export default Social
+export default styled(Social)`
+  ${baseStyling}
+
+  .social__avatar {
+    width: 3rem;
+  }
+
+  .social__anchor {
+    display: inline-block;
+    padding: ${({ theme }) => `${theme.spacingXS} ${theme.spacingM}`};
+    background-color: ${({ theme }) => theme.offWhiteLight};
+    border-radius:  ${({ theme }) => `0 ${theme.spacingS} ${theme.spacingS}`};
+    transition:  ${({ theme }) => theme.transition};
+
+    &:hover {
+      background-color: ${({ theme }) => theme.secondaryColor};
+      box-shadow: 0 5px 0 0 ${({ theme }) => theme.primaryColor};    
+    }
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+`

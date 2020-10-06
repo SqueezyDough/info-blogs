@@ -7,6 +7,7 @@ export const theme = {
   tertiaryColor: '#FF334B',
   offWhite: '#E9E1D1',
   offWhiteDark: '#D6D1C4',
+  offWhiteLight: '#F3F0E9',
 
   fontSizeXS: '18px',
   fontSizeS: '30px',
@@ -14,6 +15,12 @@ export const theme = {
   fontSizeL: '80px',
   fontSizeXL: '100px',
   fontSizeXXL: '120px',
+
+  spacingXS: '.5rem',
+  spacingS: '1rem',
+  spacingM: '2rem',
+  spacingL: '4rem',
+  spacingXL: '6rem',
 
   transition: '.2s',
 

@@ -8,13 +8,11 @@ import { baseStyling } from './styles'
 
 const Header = ({ className, title }) => {
   return (
-    <header className={className}>
-      <div className='content'>
-        <Heading as='h1'>
-          <Link to='/'>{title}</Link>
-        </Heading>
-        <Social />
-      </div>
+    <header className={className}>  
+      <Heading as='h1'>
+        <Link to='/'>{title}</Link>
+      </Heading>
+      <Social />
     </header>
   )
 }

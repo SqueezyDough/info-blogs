@@ -1,5 +1,3 @@
-import { theme } from 'theme'
-
 export const baseStyling = `
   display: flex;
   flex-direction: column;
@@ -10,10 +8,7 @@ export const baseStyling = `
 
   ul {
     display: flex;
+    justify-content: space-between;
     list-style-type: none;
-
-    li {
-      margin-right: ${theme.spacingS}
-    }
   }
 `

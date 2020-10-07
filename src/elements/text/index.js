@@ -4,9 +4,13 @@ import React from 'react'
 
 import { baseStyling, fontFamily, fontSize } from './styles'
 
-const StyledText = styled.div`
+const Text = ({ weight = 'regular', size = 'regular', ...props }) => (
+  <div as weight={weight} size={size} {...props} />
+)
+
+export default styled(Text)`
   ${baseStyling}
-  
+    
   ${({ weight, size }) => {
     return css`
       font-family: ${fontFamily(weight)};
@@ -14,12 +18,6 @@ const StyledText = styled.div`
     `
   }}
 `
-
-const Text = ({ weight = 'regular', size = 'regular', ...props }) => (
-  <StyledText as weight={weight} size={size} {...props} />
-)
-
-export default Text
 
 Text.propTypes = {
   as: PropTypes.string,

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import SiteRef from 'components/site-ref'
 import Heading from 'elements/heading'
 import Anchor from 'elements/anchor'
 import Text from 'elements/text'
@@ -11,12 +12,14 @@ import {
   StyledSmall
 } from './styles'
 
-const Header = ({ className, size = 'large', post }) => {
+const Blogpost = ({ className, size = 'large', post }) => {
   if (!post) {
     return null
   }
 
   const title = post.frontmatter.title || post.fields.slug
+
+  console.log(post)
 
   return (
     <li className={className} key={post.fields.slug}>
@@ -57,11 +60,17 @@ const Header = ({ className, size = 'large', post }) => {
           )}
         </div>
       </article>
+
+      {post.frontmatter.site ? (
+        <SiteRef site={post.frontmatter.site} />
+      ) : (
+        null
+      )}
     </li>
   )
 }
 
-export default styled(Header)`
+export default styled(Blogpost)`
   ${baseStyling}
 
   ${props => {
@@ -75,8 +84,18 @@ export default styled(Header)`
     }
   }}
 
+  &:hover {
+    ${SiteRef} {
+      margin-left: -1rem;
+    }
+  }
+
+  ${SiteRef} {
+    position: relative;
+  }
+
   h6 {
-    margin: ${({ theme }) => `0 0 ${theme.spacingS}`};  
+    margin: ${({ theme }) => `${theme.spacingL} 0 ${theme.spacingS}`};  
     color: ${({ theme }) => theme.primaryColorLight}; 
     text-transform: uppercase;
   }

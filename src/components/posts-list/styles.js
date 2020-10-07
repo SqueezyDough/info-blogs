@@ -11,6 +11,10 @@ export const baseStyling = () => {
       display: flex;
       overflow-x: auto;
       overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      ::-webkit-scrollbar {
+        display: none;
+      }
     }
   `
 }

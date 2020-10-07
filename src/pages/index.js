@@ -49,6 +49,10 @@ export const pageQuery = graphql`
           title
           description
           tags
+          site { 
+            url 
+            thumbnail
+          }
         }
       }
     }

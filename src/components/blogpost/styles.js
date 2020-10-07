@@ -2,11 +2,19 @@ import { css } from 'styled-components'
 
 export const baseStyling = () => {
   return css`
-    min-width: 20rem;
-    margin-left: ${({ theme }) => theme.spacingS}; 
-    border-radius: ${({ theme }) => `0 ${theme.spacingS} ${theme.spacingS}`}; 
+    display: flex;
+    position: relative;
+    margin-left: ${({ theme }) => theme.spacingS};
+    z-index: 1;
+
+    article {
+      margin: 0;
+      width: 20.5rem; 
+      border-radius: ${({ theme }) => `0 ${theme.spacingS} ${theme.spacingS}`}; 
+    }
     
     h2 {
+      padding-top: ${({ theme }) => theme.spacingM};
       color: ${({ theme }) => theme.offWhite}; 
     }
 
@@ -24,12 +32,18 @@ export const baseStyling = () => {
       flex-grow: 1;
       padding: ${({ theme }) => theme.spacingS}; 
     }
+
+    .blogpost__footer {
+      padding: 0;
+    }
   `
 }
 
 export const StyledLarge = () => {
   return css`
-    background-image: ${({ theme }) => theme.primaryGradient};  
-    color: ${({ theme }) => theme.primaryColorLight};  
+    article {
+      background-image: ${({ theme }) => theme.primaryGradient};  
+      color: ${({ theme }) => theme.primaryColorLight}; 
+    } 
   `
 }

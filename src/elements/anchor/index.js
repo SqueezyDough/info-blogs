@@ -10,9 +10,9 @@ import {
   StyledQuaternary
 } from './styles'
 
-const Anchor = ({ className, type = 'primary', title }) => {
+const Anchor = ({ className, type = 'primary', path, title }) => {
   return (
-    <Link className={className} type={type} to='/'>{title}</Link>
+    <Link className={className} type={type} to={path}>{title}</Link>
   )
 }
 

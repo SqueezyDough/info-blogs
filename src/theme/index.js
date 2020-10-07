@@ -5,11 +5,16 @@ export const theme = {
   fontDescriptionBold: "'Source Sans Pro Bold', sans-serif;",
 
   primaryColor: '#07203B',
+  primaryColorLight: '#5E87B4',
   secondaryColor: '#55CBD6',
   tertiaryColor: '#FF334B',
   offWhite: '#E9E1D1',
   offWhiteDark: '#D6D1C4',
   offWhiteLight: '#F3F0E9',
+  yellow: '#F8E71C',
+
+  primaryGradient: 'linear-gradient(-180deg, #0C2C4F 3%, #07203B 98%);',
+  secondaryGradient: 'linear-gradient(-180deg, #68E3EF 0%, #55CBD6 99%);',
 
   fontSizeXS: '18px',
   fontSizeS: '30px',

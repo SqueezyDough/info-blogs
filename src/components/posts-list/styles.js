@@ -9,6 +9,8 @@ export const baseStyling = () => {
 
     ol {
       display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
     }
   `
 }

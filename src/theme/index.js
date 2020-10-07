@@ -5,7 +5,7 @@ export const theme = {
   fontDescriptionBold: "'Source Sans Pro Bold', sans-serif;",
 
   primaryColor: '#07203B',
-  primaryColorLight: '#5E87B4',
+  primaryColorLight: '#6c7d90',
   secondaryColor: '#55CBD6',
   tertiaryColor: '#FF334B',
   offWhite: '#E9E1D1',

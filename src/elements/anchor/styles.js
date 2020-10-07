@@ -19,9 +19,10 @@ export const baseStyling = () => {
 export const StyledPrimary = () => {
   return css`
     background-color: #FFFFFF15;
-    color: ${({ theme }) => theme.offWhite};  
+    color: ${({ theme }) => theme.secondaryColor};  
     &:hover {
       background-color: ${({ theme }) => theme.tertiaryColor};  
+      color: ${({ theme }) => theme.offWhite}; 
       box-shadow: 0 5px 0 0 ${({ theme }) => theme.primaryColor};    
     }
   `

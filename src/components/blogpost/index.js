@@ -77,7 +77,7 @@ export default styled(Header)`
 
   h6 {
     margin: ${({ theme }) => `0 0 ${theme.spacingS}`};  
-    color: ${({ theme }) => theme.offWhite};  
+    color: ${({ theme }) => theme.primaryColorLight}; 
     text-transform: uppercase;
   }
 

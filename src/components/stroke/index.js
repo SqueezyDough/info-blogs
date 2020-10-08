@@ -48,8 +48,20 @@ export default styled(Stroke)`
     }
 
     ${props =>
-      props.stroke?.startVertically && css`
-        
+      props.stroke?.reverse && css`
+        .stroke {
+          transform: scaleX(-1);
+
+          &.-vertical {
+            right: 0;
+            border-radius: ${({ theme }) => `0 ${theme.baseStroke.width} 0 ${theme.baseStroke.width}`}; 
+          }
+
+          &.-horizontal {
+            width: 65%;
+            right: 0;
+          }
+        }
       `};
     }
   }

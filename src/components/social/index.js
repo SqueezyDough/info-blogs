@@ -9,7 +9,7 @@ import Linkedin from 'svg/icon-linkedin-alt.svg'
 
 import { baseStyling } from './styles'
 
-const Social = ({ className }) => {
+const Social = ({ className, showAvatar }) => {
   const data = useStaticQuery(graphql`
     query SocialQuery {
       site {
@@ -31,7 +31,7 @@ const Social = ({ className }) => {
 
   return (
     <div className={className}>
-      {Avatar && (
+      {Avatar && showAvatar && (
         <Avatar className='social__avatar' />
       )}
       {author?.name && (

@@ -47,7 +47,6 @@ export const baseStyling = () => {
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
-      height: 100%;
     }
 
     .blogpost__content {

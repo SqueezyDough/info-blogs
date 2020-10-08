@@ -7,6 +7,7 @@ export const theme = {
   primaryColor: '#0e9ba8',
   primaryColorDark: '#1c676f',
   secondaryColor: '#55CBD6',
+  secondaryColorDark: '#0C2C4F',
   tertiaryColor: '#FF334B',
   offWhite: '#E9E1D1',
   offWhiteDark: '#D6D1C4',
@@ -14,8 +15,8 @@ export const theme = {
   altOffWhite: '#DCD4C1',
   yellow: '#F8E71C',
 
-  primaryGradient: 'linear-gradient(-180deg, #29BAC7 0%, #148590 96%);',
-  secondaryGradient: 'linear-gradient(-180deg, #62DAE6 0%, #40A1AA 98%);',
+  primaryGradient: 'linear-gradient(-180deg, #43C8D4 0%, #33A0AB 94%)',
+  secondaryGradient: 'linear-gradient(-180deg, #62DAE6 0%, #40A1AA 98%)',
 
   fontSizeXS: '18px',
   fontSizeS: '30px',

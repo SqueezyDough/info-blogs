@@ -35,7 +35,7 @@ export default styled(BlockHeading)`
 
     .stroke {
       height: 80%;
-      background-color: ${({ theme }) => theme.primaryColor};
+      background-color: ${({ theme }) => theme.secondaryColorDark};
       border-bottom-left-radius: 0;
     }
   }

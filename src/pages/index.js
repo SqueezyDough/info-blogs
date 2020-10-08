@@ -3,12 +3,24 @@ import { graphql } from 'gatsby'
 import Layout from 'components/layout'
 import SEO from 'components/seo'
 import PostsList from 'components/posts-list'
+import Stroke from 'components/stroke'
+import { theme } from 'theme'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || 'Title'
   const posts = data.allMarkdownRemark.nodes
   const projects = posts.filter(post => post.fields.slug.includes('projects'))
   const topics = posts.filter(post => post.fields.slug.includes('topics'))
+
+  const stroke = {
+    color: theme.secondaryColorDark,
+    yAxis: {
+      start: true
+    },
+    xAxis: true,
+    corner: true,
+    reverse: true
+  }
 
   if (posts.length === 0) {
     return (
@@ -26,10 +38,15 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title='All posts' />
-      <PostsList posts={projects} category='Projects' />
 
-      <section class='styled-wrapper'>
-        <PostsList posts={topics} category='Topics' size='small' />
+      <section className='main-content'>
+        <PostsList posts={projects} category='Projects' />
+
+        <div class='styled-wrapper'>
+          <PostsList posts={topics} category='Topics' size='small' />
+        </div>
+
+        <Stroke stroke={stroke} />
       </section>
     </Layout>
   )

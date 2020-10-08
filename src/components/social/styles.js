@@ -1,6 +1,7 @@
 export const baseStyling = `
   display: flex;
   flex-direction: column;
+  max-width: 6.8rem;
 
   h5 {
     margin: 3rem 0 0 0;

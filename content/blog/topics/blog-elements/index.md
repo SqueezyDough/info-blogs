@@ -2,6 +2,10 @@
 title: Blog elements
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
+site: {
+  url: 'https://info-star-wars.netlify.app/',
+  thumbnail: 'https://i.gyazo.com/1c4b01f02be8c80a09968821e15d6a9b.gif'
+}
 tags: ["Imagine and create", "Evaluate"]
 ---
 

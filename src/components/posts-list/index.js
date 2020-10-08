@@ -4,17 +4,34 @@ import Blogpost from 'components/blogpost'
 import BlockHeading from 'elements/block-heading'
 import { baseStyling } from './styles'
 
-const PostsList = ({ className, posts, category, size = 'large' }) => (
-  <div className={className}>
-    <BlockHeading title={category} />
-    <ol style={{ listStyle: 'none' }}>
-      {posts.map(post => (
-        <Blogpost key={post.fields.slug} post={post} size={size} />
-      ))}
-    </ol>
-  </div>
-)
+const PostsList = ({ className, posts, category, size = 'large' }) => {
+  if (posts.length === 0) {
+    return (
+      <div className={className}>
+        <BlockHeading title={category} />
+        <p>
+          No blogs available for {category}.
+        </p>
+      </div>
+    )
+  }
+
+  return (
+    <div className={className}>
+      <BlockHeading title={category} />
+      <ol style={{ listStyle: 'none' }}>
+        {posts.map(post => (
+          <Blogpost key={post.fields.slug} post={post} size={size} />
+        ))}
+      </ol>
+    </div>
+  )
+}
 
 export default styled(PostsList)`
   ${baseStyling}
+
+  p {
+    padding: ${({ theme }) => theme.spacingS};
+  }
 `

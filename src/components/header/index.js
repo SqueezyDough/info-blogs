@@ -16,7 +16,7 @@ const Header = ({ className, title }) => {
         </Heading>
         <Intro />
       </div>
-      <Social />
+      <Social showAvatar />
     </header>
   )
 }

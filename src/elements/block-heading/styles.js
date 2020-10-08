@@ -9,7 +9,7 @@ export const baseStyling = () => {
     position: relative;
     width: 15rem;
     height: 16em;
-    background-color: ${({ theme }) => theme.primaryColor};
+    background-color: ${({ theme }) => theme.secondaryColorDark};
     border: ${({ theme }) => `${theme.baseStroke.halfWidth} solid ${theme.secondaryColor}`};
     border-top-width: ${({ theme }) => theme.baseStroke.halfWidth};
     border-right-width: ${({ theme }) => theme.spacingS};

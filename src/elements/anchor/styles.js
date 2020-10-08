@@ -18,12 +18,12 @@ export const baseStyling = () => {
 
 export const StyledPrimary = () => {
   return css`
-    background-color: #FFFFFF15;
+    background-color: #FFFFFF25;
     color: ${({ theme }) => theme.offWhite};  
     &:hover {
-      background-color: ${({ theme }) => theme.primaryColorDark};  
+      background-color: #FFFFFF55; 
       color: ${({ theme }) => theme.offWhite}; 
-      box-shadow: 0 6px 0 0 ${({ theme }) => theme.primaryColorDark};    
+      box-shadow: 0 6px 0 0 #FFFFFF55;;    
     }
   `
 }

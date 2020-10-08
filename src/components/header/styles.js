@@ -4,6 +4,7 @@ export const baseStyling = `
   display: flex;
   justify-content: space-between;
   width: 100%;
+  min-height: 30rem;
 
   h1 {
     text-transform: uppercase;

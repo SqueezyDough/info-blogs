@@ -21,9 +21,9 @@ export const StyledPrimary = () => {
     background-color: #FFFFFF15;
     color: ${({ theme }) => theme.offWhite};  
     &:hover {
-      background-color: ${({ theme }) => theme.tertiaryColor};  
+      background-color: ${({ theme }) => theme.primaryColorDark};  
       color: ${({ theme }) => theme.offWhite}; 
-      box-shadow: 0 5px 0 0 ${({ theme }) => theme.primaryColor};    
+      box-shadow: 0 6px 0 0 ${({ theme }) => theme.primaryColorDark};    
     }
   `
 }

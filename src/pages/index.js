@@ -7,6 +7,8 @@ import PostsList from 'components/posts-list'
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || 'Title'
   const posts = data.allMarkdownRemark.nodes
+  const projects = posts.filter(post => post.fields.slug.includes('projects'))
+  const topics = posts.filter(post => post.fields.slug.includes('topics'))
 
   if (posts.length === 0) {
     return (
@@ -24,7 +26,11 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title='All posts' />
-      <PostsList posts={posts} />
+      <PostsList posts={projects} category='Projects' />
+
+      <section class='styled-wrapper'>
+        <PostsList posts={topics} category='Topics' size='small' />
+      </section>
     </Layout>
   )
 }

@@ -11,10 +11,11 @@ export const theme = {
   offWhite: '#E9E1D1',
   offWhiteDark: '#D6D1C4',
   offWhiteLight: '#F3F0E9',
+  altOffWhite: '#DCD4C1',
   yellow: '#F8E71C',
 
   primaryGradient: 'linear-gradient(-180deg, #29BAC7 0%, #148590 96%);',
-  secondaryGradient: 'linear-gradient(-180deg, #68E3EF 0%, #55CBD6 99%);',
+  secondaryGradient: 'linear-gradient(-180deg, #62DAE6 0%, #40A1AA 98%);',
 
   fontSizeXS: '18px',
   fontSizeS: '30px',

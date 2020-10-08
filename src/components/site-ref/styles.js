@@ -4,7 +4,8 @@ export const baseStyling = () => {
   return css`
     display: flex;
     flex-direction: column;
-    height: 24rem;
+    height: 100%;
+    max-height: 23rem;
     width: 10rem;
     margin-left: -10rem;
     position: relative;
@@ -33,6 +34,7 @@ export const baseStyling = () => {
       img {
         filter: blur(4px);
         height: 100%;
+        width: 100%;
         transition: filter ${({ theme }) => theme.transition};
       }
 

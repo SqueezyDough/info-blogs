@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import SiteRef from 'components/site-ref'
 import Heading from 'elements/heading'
 import Anchor from 'elements/anchor'
@@ -12,14 +12,12 @@ import {
   StyledSmall
 } from './styles'
 
-const Blogpost = ({ className, size = 'large', post }) => {
+const Blogpost = ({ className, post, size = 'large' }) => {
   if (!post) {
     return null
   }
 
   const title = post.frontmatter.title || post.fields.slug
-
-  console.log(post)
 
   return (
     <li className={className} key={post.fields.slug}>
@@ -35,13 +33,17 @@ const Blogpost = ({ className, size = 'large', post }) => {
         </header>
         <div className='blogpost__content'>
           <section className='blogpost__body'>
-            <Text
-              size='large'
-              dangerouslySetInnerHTML={{
-                __html: post.frontmatter.description || post.excerpt
-              }}
-              itemProp='description'
-            />
+            {size === 'large' ? (
+              <Text
+                size='large'
+                dangerouslySetInnerHTML={{
+                  __html: post.frontmatter.description || post.excerpt
+                }}
+                itemProp='description'
+              />
+            ) : (
+              null
+            )}
             <Anchor type='primary' path={post.fields.slug} title='Read more' />
           </section>
           {post.frontmatter.tags ? (
@@ -84,6 +86,14 @@ export default styled(Blogpost)`
     }
   }}
 
+  ${props =>
+    props.size === 'small' && css`
+      ${SiteRef} {
+        height: 13.5rem;
+      }
+    `};
+  }
+
   &:hover {
     ${SiteRef} {
       margin-left: -1rem;
@@ -92,30 +102,5 @@ export default styled(Blogpost)`
 
   ${SiteRef} {
     position: relative;
-  }
-
-  h6 {
-    margin: ${({ theme }) => `${theme.spacingL} 0 ${theme.spacingS}`};  
-    color: ${({ theme }) => theme.primaryColorLight}; 
-    text-transform: uppercase;
-  }
-
-  .tags-list {
-    display: flex;
-    justify-content: space-between;
-    width: 108%;
-    list-style-type: none;
-
-    li {
-      flex-grow: 1;
-
-      &:last-child {
-        margin-left: ${({ theme }) => theme.spacingS};  
-      }
-
-      span {
-        width: 100%;
-      }
-    }
   }
 `

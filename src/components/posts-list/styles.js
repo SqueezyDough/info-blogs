@@ -4,8 +4,7 @@ export const baseStyling = () => {
   return css`
     display: flex;
     position: relative; 
-    padding-bottom: 6rem;
-    margin-top: 15rem;
+    padding: ${({ theme }) => theme.spacingL} 0;
 
     ol {
       display: flex;

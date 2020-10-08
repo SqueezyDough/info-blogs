@@ -18,6 +18,31 @@ export const baseStyling = () => {
       color: ${({ theme }) => theme.offWhite}; 
     }
 
+    h6 {
+      margin: ${({ theme }) => `${theme.spacingL} 0 ${theme.spacingS}`};  
+      color: ${({ theme }) => theme.primaryColorLight}; 
+      text-transform: uppercase;
+    }
+  
+    .tags-list {
+      display: flex;
+      justify-content: space-between;
+      width: 108%;
+      list-style-type: none;
+  
+      li {
+        flex-grow: 1;
+  
+        &:last-child {
+          margin-left: ${({ theme }) => theme.spacingS};  
+        }
+  
+        span {
+          width: 100%;
+        }
+      }
+    }
+
     .post-list-item {
       display: flex;
       flex-direction: column;
@@ -30,7 +55,7 @@ export const baseStyling = () => {
       flex-direction: column;
       justify-content: space-between;
       flex-grow: 1;
-      padding: ${({ theme }) => theme.spacingS}; 
+      padding: ${({ theme }) => `0 ${theme.spacingS}`};  
     }
 
     .blogpost__footer {
@@ -45,5 +70,27 @@ export const StyledLarge = () => {
       background-image: ${({ theme }) => theme.primaryGradient};  
       color: ${({ theme }) => theme.primaryColorDark}; 
     } 
+  `
+}
+
+export const StyledSmall = () => {
+  return css`
+    article {
+      max-height: 16rem; 
+      background-image: ${({ theme }) => theme.secondaryGradient};  
+      color: ${({ theme }) => theme.primaryColorDark}; 
+    } 
+
+    header {
+      margin: 0;
+    }
+
+    h6 {
+      margin: ${({ theme }) => `${theme.spacingS} 0 ${theme.spacingS}`};  
+    }
+
+    h2 {
+      margin: ${({ theme }) => `${theme.spacingXS} 0`};  
+    }
   `
 }

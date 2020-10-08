@@ -83,7 +83,7 @@ export default styled(Social)`
 
     &:hover {
       background-color: ${({ theme }) => theme.tertiaryColor};
-      box-shadow: 0 5px 0 0 ${({ theme }) => theme.primaryColor};    
+      box-shadow: 0 6px 0 0 ${({ theme }) => theme.tertiaryColor};    
     }
 
     svg {

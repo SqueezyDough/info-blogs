@@ -15,7 +15,7 @@ export const baseStyling = () => {
     border-right-width: ${({ theme }) => theme.spacingM};
     border-bottom-width: .5rem;
     border-left-width: 0;
-    border-radius: ${({ theme }) => theme.spacingL};
+    border-radius: ${({ theme }) => `0 ${theme.spacingL} ${theme.spacingL}`};
 
     /* inner corner rounding */
     &::after {
@@ -39,8 +39,11 @@ export const baseStyling = () => {
 
 export const StrokeTop = () => {
   return css`
+    margin-right: 1rem;
+    width: 14rem;
     background-color: ${({ theme }) => theme.primaryColorDark};
     border-color: ${({ theme }) => theme.secondaryColor};
+    border-right-width: 1rem;
 
     &::before {
       content: '';
@@ -49,7 +52,7 @@ export const StrokeTop = () => {
       top: -${({ theme }) => theme.spacingM};
       height: ${({ theme }) => theme.spacingL};
       width: ${({ theme }) => `calc(100% + ${theme.spacingM})`};
-      border-radius: ${({ theme }) => `${theme.spacingL} ${theme.spacingL} 0 0`};
+      border-radius: ${({ theme }) => `0 ${theme.spacingL} 0 0`};
       background-color: ${({ theme }) => theme.primaryColorDark};
     }
 
@@ -62,14 +65,16 @@ export const StrokeTop = () => {
 
 export const StrokeLeft = () => {
   return css`
+    border-bottom-width: 1rem;
+
     &::before {
       content: '';
       position: absolute;
       z-index: 0;
-      top: -${({ theme }) => theme.spacingM};
+      bottom: -${({ theme }) => theme.spacingM};
       height: ${({ theme }) => `calc(100% + ${theme.spacingM})`};
       width: ${({ theme }) => theme.spacingL};
-      border-radius: ${({ theme }) => `${theme.spacingL} 0 0 ${theme.spacingL}`};
+      border-radius: ${({ theme }) => ` 0 ${theme.spacingL} 0 ${theme.spacingL}`};
       background-color: ${({ theme }) => theme.secondaryColorDark};
     }
   `

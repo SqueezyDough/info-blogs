@@ -6,8 +6,6 @@ import Heading from 'elements/heading'
 import { baseStyling, StrokeTop, StrokeLeft } from './styles'
 
 const BlockHeading = ({ className, title, strokePosition = 'left' }) => {
-  console.log(strokePosition)
-
   return (
     <div className={className}>
       <Heading as='h2'>

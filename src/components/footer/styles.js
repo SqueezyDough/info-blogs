@@ -26,7 +26,7 @@ export const baseStyling = `
     justify-content: space-between;
     margin-top: ${theme.spacingL};
     max-width: 11rem;
-    color: ${theme.secondaryColorDark};
+    color: #000;
     font-family: ${theme.fontTitle};
   }
 `

@@ -1,44 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import Stroke from 'components/stroke'
 import Heading from 'elements/heading'
-import { theme } from 'theme'
-import { baseStyling } from './styles'
 
-const stroke = {
-  color: theme.primaryColor,
-  yAxis: {
-    start: true
-  },
-  reverse: false
-}
+import { baseStyling, StrokeTop, StrokeLeft } from './styles'
 
-const BlockHeading = ({ className, title }) => (
-  <>
+const BlockHeading = ({ className, title, strokePosition = 'left' }) => {
+  console.log(strokePosition)
+
+  return (
     <div className={className}>
-      <Stroke stroke={stroke} />
       <Heading as='h2'>
         &mdash; {title}
       </Heading>
     </div>
-  </>
-)
+  )
+}
 
 export default styled(BlockHeading)`
   ${baseStyling}
 
-  ${Stroke} {
-    position: absolute;
-    top: -${({ theme }) => theme.baseStroke.halfWidth};
-    z-index: 0;
-
-    .stroke {
-      height: 80%;
-      background-color: ${({ theme }) => theme.secondaryColorDark};
-      border-bottom-left-radius: 0;
+  ${props => {
+    switch (props.strokePosition) {
+      case 'top':
+        return StrokeTop
+      case 'left':
+        return StrokeLeft
+      default:
+        return StrokeLeft
     }
-  }
+  }}
 `
 
 BlockHeading.propTypes = {

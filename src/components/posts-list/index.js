@@ -4,11 +4,11 @@ import Blogpost from 'components/blogpost'
 import BlockHeading from 'elements/block-heading'
 import { baseStyling } from './styles'
 
-const PostsList = ({ className, posts, category, size = 'large' }) => {
+const PostsList = ({ className, posts, category, strokePosition, size = 'large' }) => {
   if (posts.length === 0) {
     return (
       <div className={className}>
-        <BlockHeading title={category} />
+        <BlockHeading title={category} strokePosition={strokePosition} />
         <p>
           No blogs available for {category}.
         </p>
@@ -18,7 +18,7 @@ const PostsList = ({ className, posts, category, size = 'large' }) => {
 
   return (
     <div className={className}>
-      <BlockHeading title={category} />
+      <BlockHeading title={category} strokePosition={strokePosition} />
       <ol style={{ listStyle: 'none' }}>
         {posts.map(post => (
           <Blogpost key={post.fields.slug} post={post} size={size} />

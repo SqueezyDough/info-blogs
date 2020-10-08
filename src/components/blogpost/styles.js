@@ -67,8 +67,18 @@ export const StyledLarge = () => {
   return css`
     article {
       background-image: ${({ theme }) => theme.primaryGradient};  
-      color: ${({ theme }) => theme.primaryColorDark}; 
+      color: ${({ theme }) => theme.secondaryColorDark}; 
     } 
+
+    aside {
+      border-color: ${({ theme }) => theme.tertiaryColor};
+    }
+
+    .tags-list {
+      span {
+        background-color: ${({ theme }) => theme.secondaryColorDark};
+      }
+    }
   `
 }
 

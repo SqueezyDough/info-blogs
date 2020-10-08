@@ -13,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
   const topics = posts.filter(post => post.fields.slug.includes('topics'))
 
   const stroke = {
-    color: theme.secondaryColorDark,
+    color: theme.primaryColorDark,
     yAxis: {
       start: true
     },
@@ -40,10 +40,10 @@ const BlogIndex = ({ data, location }) => {
       <SEO title='All posts' />
 
       <section className='main-content'>
-        <PostsList posts={projects} category='Projects' />
+        <PostsList posts={projects} category='Projects' strokePosition='left' />
 
         <div class='styled-wrapper'>
-          <PostsList posts={topics} category='Topics' size='small' />
+          <PostsList posts={topics} category='Topics' size='small' strokePosition='top' />
         </div>
 
         <Stroke stroke={stroke} />

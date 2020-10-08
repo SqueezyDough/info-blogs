@@ -89,14 +89,14 @@ export default styled(Blogpost)`
   ${props =>
     props.size === 'small' && css`
       ${SiteRef} {
-        height: 13.5rem;
+        height: 14.5rem;
       }
     `};
   }
 
   &:hover {
     ${SiteRef} {
-      margin-left: -1rem;
+      margin-left: -3.6rem;
     }
   }
 

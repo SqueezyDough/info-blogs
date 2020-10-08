@@ -44,6 +44,7 @@ export const StrokeTop = () => {
     background-color: ${({ theme }) => theme.primaryColorDark};
     border-color: ${({ theme }) => theme.secondaryColor};
     border-right-width: 1rem;
+    border-bottom-width: 1rem;
 
     &::before {
       content: '';

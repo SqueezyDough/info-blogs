@@ -10,7 +10,7 @@ export const baseStyling = () => {
     article {
       margin: 0;
       width: 20.5rem; 
-      border-radius: ${({ theme }) => `0 ${theme.spacingS} ${theme.spacingS}`}; 
+      border-radius: ${({ theme }) => `0 ${theme.spacingL} ${theme.spacingM} ${theme.spacingM}`}; 
     }
     
     h2 {

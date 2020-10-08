@@ -28,6 +28,13 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'fonts',
+        path: `${__dirname}/src/theme/fonts.js`
+      }
+    },
+    {
       resolve: 'gatsby-plugin-module-resolver',
       options: {
         root: './src',

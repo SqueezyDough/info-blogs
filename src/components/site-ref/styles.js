@@ -6,13 +6,13 @@ export const baseStyling = () => {
     flex-direction: column;
     height: 100%;
     max-height: 23rem;
-    width: 10rem;
-    margin-left: -10rem;
+    width: 12rem;
+    margin-left: -12rem;
     position: relative;
     z-index: -1;
     overflow: hidden;
     background-color: ${({ theme }) => theme.secondaryColor}; 
-    border-radius: ${({ theme }) => `0 ${theme.spacingS} ${theme.spacingL}`}; 
+    border-radius: ${({ theme }) => `0 ${theme.spacingL} ${theme.spacingL}`}; 
     border: ${({ theme }) => theme.spacingXS} solid ${({ theme }) => theme.secondaryColor}; 
     border-bottom-width: ${({ theme }) => theme.spacingM};
     transition: margin .5s;   

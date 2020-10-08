@@ -24,8 +24,7 @@ export default styled(SiteRef)`
   ${Anchor} {
     position: absolute;
     bottom: ${({ theme }) => theme.spacingXS}; 
-    left: 50%;
-    transform: translateX(-50%);
+    right: ${({ theme }) => theme.spacingS}; ;
     z-index: 1;
     color: ${({ theme }) => theme.offWhite};
 

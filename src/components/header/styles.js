@@ -18,7 +18,7 @@ export const baseStyling = `
     position: absolute;
     top: 0;
     z-index: -1;
-    border-radius: 0 0 ${theme.baseStroke.width} ${theme.baseStroke.width};
+    border-radius: 0 0 ${theme.baseStroke.width} 0;
     background-color: ${theme.tertiaryColor};
   }
 `

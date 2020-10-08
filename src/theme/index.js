@@ -4,8 +4,8 @@ export const theme = {
   fontDescriptionSemi: "'Source Sans Pro Semi', sans-serif;",
   fontDescriptionBold: "'Source Sans Pro Bold', sans-serif;",
 
-  primaryColor: '#07203B',
-  primaryColorLight: '#6c7d90',
+  primaryColor: '#0e9ba8',
+  primaryColorDark: '#1c676f',
   secondaryColor: '#55CBD6',
   tertiaryColor: '#FF334B',
   offWhite: '#E9E1D1',
@@ -13,7 +13,7 @@ export const theme = {
   offWhiteLight: '#F3F0E9',
   yellow: '#F8E71C',
 
-  primaryGradient: 'linear-gradient(-180deg, #0C2C4F 3%, #07203B 98%);',
+  primaryGradient: 'linear-gradient(-180deg, #29BAC7 0%, #148590 96%);',
   secondaryGradient: 'linear-gradient(-180deg, #68E3EF 0%, #55CBD6 99%);',
 
   fontSizeXS: '18px',

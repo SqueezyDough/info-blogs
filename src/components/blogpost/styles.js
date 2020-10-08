@@ -43,7 +43,7 @@ export const StyledLarge = () => {
   return css`
     article {
       background-image: ${({ theme }) => theme.primaryGradient};  
-      color: ${({ theme }) => theme.primaryColorLight}; 
+      color: ${({ theme }) => theme.primaryColorDark}; 
     } 
   `
 }

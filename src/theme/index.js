@@ -1,5 +1,5 @@
 export const theme = {
-  fontTitle: 'Metropolis Bold, sans serif',
+  fontTitle: 'Futura Medium, sans-serif',
   fontDescription: 'Source Sans Pro, sans-serif',
   fontDescriptionSemi: "'Source Sans Pro Semi', sans-serif;",
   fontDescriptionBold: "'Source Sans Pro Bold', sans-serif;",

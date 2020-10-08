@@ -21,8 +21,8 @@ export const fonts = `
   }
 
   @font-face {
-    font-family: "Metropolis Bold";
-    src: url("./fonts/Metropolis/Metropolis-Bold.otf");
+    font-family: "Futura Medium";
+    src: url("./fonts/Futura/futura medium bt.ttf");
     font-style: normal;
     font-display: swap;
   }

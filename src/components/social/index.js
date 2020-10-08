@@ -5,7 +5,7 @@ import Heading from 'elements/heading'
 
 import Avatar from 'svg/icon-bljw.svg'
 import Github from 'svg/icon-github.svg'
-import Linkedin from 'svg/icon-linkedin-alt.svg'
+import Linkedin from 'svg/icon-linkedin.svg'
 
 import { baseStyling } from './styles'
 

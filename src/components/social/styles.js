@@ -11,5 +11,9 @@ export const baseStyling = `
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+
+    li:first-of-type {
+      margin-right: 1rem;
+    }
   }
 `

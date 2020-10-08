@@ -2,7 +2,7 @@ import { theme } from 'theme'
 
 export const baseStyling = `
   position: relative; 
-  margin-top: -5.5rem;
+  margin-top: -5.8rem;
   z-index: 1;
   idth: 100%;
 

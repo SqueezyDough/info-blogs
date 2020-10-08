@@ -20,7 +20,6 @@ export const baseStyling = () => {
 
     h6 {
       margin: ${({ theme }) => `${theme.spacingL} 0 ${theme.spacingS}`};  
-      color: ${({ theme }) => theme.primaryColorLight}; 
       text-transform: uppercase;
     }
   
@@ -74,6 +73,10 @@ export const StyledLarge = () => {
       border-color: ${({ theme }) => theme.tertiaryColor};
     }
 
+    h6 {
+      color: ${({ theme }) => theme.secondaryColorDark}; 
+    }
+
     .tags-list {
       span {
         background-color: ${({ theme }) => theme.secondaryColorDark};
@@ -95,7 +98,8 @@ export const StyledSmall = () => {
     }
 
     h6 {
-      margin: ${({ theme }) => `${theme.spacingS} 0 ${theme.spacingS}`};  
+      margin: ${({ theme }) => `${theme.spacingM} 0 ${theme.spacingS}`};  
+      color: ${({ theme }) => theme.primaryColorDark}; 
     }
 
     h2 {

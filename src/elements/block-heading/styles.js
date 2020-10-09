@@ -50,12 +50,13 @@ export const baseStyling = () => {
 
 export const StrokeTop = () => {
   return css`
-    margin-right: 1rem;
     background-color: ${({ theme }) => theme.colors.primary};
-    border-color: ${({ theme }) => theme.secondaryColor};
+    border-color: ${({ theme }) => theme.colors.primary};
     border-bottom-width: 1rem;
 
     @media(${({ theme }) => `min-width: ${theme.screens.sm}`}) {
+      margin-right: 1rem;
+      min-width: 7rem;
       background-color: ${({ theme }) => theme.colors.primaryDark};
 
       &::before {

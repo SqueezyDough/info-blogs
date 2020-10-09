@@ -71,6 +71,16 @@ const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.tertiary};
   }
 
+  .global-wrapper {
+    margin: ${({ theme }) => theme.spacing.sm} auto;
+    max-width: 82rem;
+    padding: 0;
+
+    @media(${({ theme }) => `min-width: ${theme.screens.md}`}) {
+      padding: ${({ theme }) => theme.spacing.sm};
+    }
+  }
+
   .styled-wrapper {
     width: 110%;
     margin-left: -5%;

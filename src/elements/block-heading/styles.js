@@ -8,13 +8,18 @@ export const baseStyling = () => {
     position: relative;
     width: 4rem;
     min-width: 4rem;
-    background-color: ${({ theme }) => theme.secondaryColorDark};
     border: ${({ theme }) => `${theme.spacingM} solid ${theme.tertiaryColor}`};
     border-top-width: ${({ theme }) => theme.spacing.sm};
     border-right-width: ${({ theme }) => theme.spacing.sm};
     border-bottom-width: .5rem;
     border-left-width: 0;
     border-radius: ${({ theme }) => `0 ${theme.spacing.lg} ${theme.spacing.lg} 0`};
+
+    @media(${({ theme }) => `min-width: ${theme.screens.sm}`}) {
+      min-width: 8rem;
+      border-radius: ${({ theme }) => `0 ${theme.spacing.lg} ${theme.spacing.lg}`};
+      border-top-width: ${({ theme }) => theme.spacing.md};
+    }
 
     @media(${({ theme }) => `min-width: ${theme.screens.md}`}) {
       min-width: 15rem;
@@ -46,12 +51,12 @@ export const baseStyling = () => {
 export const StrokeTop = () => {
   return css`
     margin-right: 1rem;
-    background-color: ${({ theme }) => theme.primaryColorDark};
+    background-color: ${({ theme }) => theme.colors.primary};
     border-color: ${({ theme }) => theme.secondaryColor};
     border-bottom-width: 1rem;
 
-    @media(${({ theme }) => `min-width: ${theme.screens.md}`}) {
-      min-width: 14rem;
+    @media(${({ theme }) => `min-width: ${theme.screens.sm}`}) {
+      background-color: ${({ theme }) => theme.colors.primaryDark};
 
       &::before {
         content: '';
@@ -65,15 +70,20 @@ export const StrokeTop = () => {
       }
     }
 
-    
+    @media(${({ theme }) => `min-width: ${theme.screens.md}`}) {
+      min-width: 14rem;
+    }
   `
 }
 
 export const StrokeLeft = () => {
   return css`
     border-bottom-width: 1rem;
+    background-color: ${({ theme }) => theme.colors.tertiary};
     
-    @media(${({ theme }) => `min-width: ${theme.screens.md}`}) {
+    @media(${({ theme }) => `min-width: ${theme.screens.sm}`}) {
+      background-color: ${({ theme }) => theme.colors.tertiaryDark};
+
       &::before {
         content: '';
         position: absolute;

@@ -53,6 +53,7 @@ export const theme = {
     secondary: '#33a0ab',
     secondaryDark: '#b22031',
     tertiary: '#FF334B',
+    tertiaryDark: '#b22031',
     offWhite: '#E9E1D1',
     offWhiteDark: '#D6D1C4',
     offWhiteLight: '#F3F0E9',

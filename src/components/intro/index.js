@@ -6,12 +6,12 @@ import { baseStyling } from './styles'
 
 const Intro = ({ className }) => {
   return (
-    <header className={className}>
+    <div className={className}>
       <Text size='extraLarge'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua.
       </Text>
-    </header>
+    </div>
   )
 }
 

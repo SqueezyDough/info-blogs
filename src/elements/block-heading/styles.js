@@ -4,35 +4,38 @@ export const baseStyling = () => {
   return css`
     display: flex;
     align-items: center;
-    padding-right: 4rem;
     white-space: nowrap;
     position: relative;
-    width: 15rem;
-    height: 16em;
+    width: 8rem;
+    min-width: 8rem;
     background-color: ${({ theme }) => theme.secondaryColorDark};
     border: ${({ theme }) => `${theme.spacingM} solid ${theme.tertiaryColor}`};
     border-top-width: ${({ theme }) => theme.spacingM};
-    border-right-width: ${({ theme }) => theme.spacingM};
+    border-right-width: ${({ theme }) => theme.spacingS};
     border-bottom-width: .5rem;
     border-left-width: 0;
     border-radius: ${({ theme }) => `0 ${theme.spacingL} ${theme.spacingL}`};
 
-    /* inner corner rounding */
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: -1px;
-      width: 1rem;
-      height: 3rem;
-      box-shadow: 0 -25px 0 0 ${({ theme }) => theme.tertiaryColor};   
-      border-radius: ${({ theme }) => `0 ${theme.spacingL} 0 ${theme.spacingL}`};
+    @media(${({ theme }) => `min-width: ${theme.screens.sm}`}) {
+      min-width: 15rem;
     }
     
     h2 {
-      position: relative;
-      margin: 0 0 0 -2px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: rotate(90deg) translate(-50%, -50%);
+      transform-origin: 0 0;
+      margin: 0;
+      letter-spacing: .1rem;
       color: ${({ theme }) => theme.offWhite};
+
+      @media(${({ theme }) => `min-width: ${theme.screens.sm}`}) {
+        position: relative;
+        transform: rotate(0deg) translate(0);
+        top: unset; 
+        left: unset;
+      }
     }  
   `
 }
@@ -40,11 +43,13 @@ export const baseStyling = () => {
 export const StrokeTop = () => {
   return css`
     margin-right: 1rem;
-    width: 14rem;
     background-color: ${({ theme }) => theme.primaryColorDark};
     border-color: ${({ theme }) => theme.secondaryColor};
-    border-right-width: 1rem;
     border-bottom-width: 1rem;
+
+    @media(${({ theme }) => `min-width: ${theme.screens.sm}`}) {
+      min-width: 14rem;
+    }
 
     &::before {
       content: '';
@@ -55,11 +60,6 @@ export const StrokeTop = () => {
       width: ${({ theme }) => `calc(100% + ${theme.spacingM})`};
       border-radius: ${({ theme }) => `0 ${theme.spacingL} 0 0`};
       background-color: ${({ theme }) => theme.primaryColorDark};
-    }
-
-    &::after {
-      top: 0;
-      box-shadow: 0 -25px 0 0 ${({ theme }) => theme.primaryColorDark};  
     }
   `
 }

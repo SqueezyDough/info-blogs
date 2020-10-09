@@ -4,11 +4,13 @@ export const baseStyling = () => {
   return css`
     display: flex;
     padding: ${({ theme }) => theme.spacing.lg} 0;
-    width: calc(100% - ${({ theme }) => theme.spacing.lg});
+
+    @media(min-width: ${({ theme }) => theme.screens.lg}) {
+      width: calc(100% - ${({ theme }) => theme.spacing.lg});
+    }
 
     ol {
       display: flex;
-
       margin: ${({ theme }) => `${theme.spacing.sm} 0 0 -${theme.spacing.xl}`};
       padding: ${({ theme }) => `${theme.spacing.md} 0 0 ${theme.spacing.xl}`};
       overflow-x: scroll;

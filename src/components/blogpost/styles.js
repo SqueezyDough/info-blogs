@@ -66,7 +66,7 @@ export const baseStyling = () => {
 export const StyledLarge = () => {
   return css`
     article {
-      min-height: 25rem;
+      height: 24.5rem;
       background-image: ${({ theme }) => theme.primaryGradient};  
       color: ${({ theme }) => theme.secondaryColorDark}; 
     } 

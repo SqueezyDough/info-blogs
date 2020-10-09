@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Blogpost from 'components/blogpost'
 import BlockHeading from 'elements/block-heading'
 import { baseStyling } from './styles'
@@ -30,4 +30,19 @@ const PostsList = ({ className, posts, category, strokePosition, size = 'large' 
 
 export default styled(PostsList)`
   ${baseStyling}
+
+
+  ${props =>
+    props.category === 'Topics' && css`  
+      ol {
+        &::-webkit-scrollbar-track {
+          background: ${({ theme }) => theme.colors.offWhite};
+        }
+      
+        &::-webkit-scrollbar-thumb {
+          background-image: ${({ theme }) => theme.gradients.secondary};
+        }
+      } 
+    `};
+  }
 `

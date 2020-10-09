@@ -16,7 +16,7 @@ export const baseStyling = () => {
     border-left-width: 0;
     border-radius: ${({ theme }) => `0 ${theme.spacing.lg} ${theme.spacing.lg}`};
 
-    @media(${({ theme }) => `min-width: ${theme.screens.sm}`}) {
+    @media(${({ theme }) => `min-width: ${theme.screens.md}`}) {
       min-width: 15rem;
     }
     
@@ -30,7 +30,7 @@ export const baseStyling = () => {
       letter-spacing: .1rem;
       color: ${({ theme }) => theme.offWhite};
 
-      @media(${({ theme }) => `min-width: ${theme.screens.sm}`}) {
+      @media(${({ theme }) => `min-width: ${theme.screens.md}`}) {
         position: relative;
         transform: rotate(0deg) translate(0);
         top: unset; 
@@ -47,7 +47,7 @@ export const StrokeTop = () => {
     border-color: ${({ theme }) => theme.secondaryColor};
     border-bottom-width: 1rem;
 
-    @media(${({ theme }) => `min-width: ${theme.screens.sm}`}) {
+    @media(${({ theme }) => `min-width: ${theme.screens.md}`}) {
       min-width: 14rem;
     }
 

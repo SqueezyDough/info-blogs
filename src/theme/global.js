@@ -74,10 +74,15 @@ const GlobalStyle = createGlobalStyle`
   .global-wrapper {
     margin: ${({ theme }) => theme.spacing.sm} auto;
     max-width: 82rem;
+    overflow-x: hidden;
     padding: 0;
 
     @media(${({ theme }) => `min-width: ${theme.screens.md}`}) {
       padding: ${({ theme }) => theme.spacing.sm};
+    }
+
+    @media(${({ theme }) => `min-width: ${theme.screens.xl}`}) {
+      overflow-x: visible;
     }
   }
 
@@ -95,6 +100,14 @@ const GlobalStyle = createGlobalStyle`
 
     > .stroke-container {
       z-index: 100;
+    }
+
+    &__stroke {
+      display: none;
+
+      @media(${({ theme }) => `min-width: ${theme.screens.lg}`}) {
+        display: block;
+      }
     }
   }
 `

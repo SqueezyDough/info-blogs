@@ -46,7 +46,7 @@ const BlogIndex = ({ data, location }) => {
           <PostsList posts={topics} category='Topics' size='small' strokePosition='top' />
         </div>
 
-        <Stroke stroke={stroke} />
+        <Stroke className='main-content__stroke' stroke={stroke} />
       </section>
     </Layout>
   )

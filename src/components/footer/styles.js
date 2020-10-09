@@ -3,7 +3,7 @@ import { theme } from 'theme'
 export const baseStyling = `
   position: relative; 
   padding: ${theme.spacing.sm};
-  margin-top: -5.8rem;
+  margin-top: -4.5rem;
   z-index: 1;
 
   @media(min-width: ${theme.screens.md}) {

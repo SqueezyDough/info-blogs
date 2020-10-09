@@ -23,4 +23,12 @@ const Header = ({ className, title }) => {
 
 export default styled(Header)`
   ${baseStyling}
+
+  ${Social} {
+    display: none;
+
+    @media(${({ theme }) => `min-width: ${theme.screens.md}`}) {
+      display: block;
+    }
+  }
 `

@@ -18,18 +18,29 @@ export const theme = {
   primaryGradient: 'linear-gradient(-180deg, #FF687A 5%, #EF3E53 97%)',
   secondaryGradient: 'linear-gradient(-180deg, #62DAE6 0%, #40A1AA 98%)',
 
-  fontSizeXS: '18px',
-  fontSizeS: '30px',
-  fontSizeM: '60px',
-  fontSizeL: '80px',
-  fontSizeXL: '100px',
-  fontSizeXXL: '120px',
-
   spacingXS: '.5rem',
   spacingS: '1rem',
   spacingM: '2rem',
   spacingL: '4rem',
   spacingXL: '6rem',
+
+  fontSize: {
+    xs: '18px',
+    sm: '30px',
+    md: '60px',
+    lg: '80px',
+    xl: '100px',
+    xxl: '120px'
+  },
+
+  spacing: {
+    xs: '.5rem',
+    sm: '1rem',
+    md: '2rem',
+    lg: '4rem',
+    xl: '6rem',
+    xxl: '8rem'
+  },
 
   screens: {
     xs: '360px',
@@ -43,7 +54,6 @@ export const theme = {
   transition: '.2s',
 
   baseStroke: {
-    width: '4rem',
-    halfWidth: '2rem'
+    width: '4rem'
   }
 }

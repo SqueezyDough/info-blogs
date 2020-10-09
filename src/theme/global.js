@@ -58,6 +58,7 @@ const GlobalStyle = createGlobalStyle`
   /* Track */
   ::-webkit-scrollbar-track {
     background: ${({ theme }) => theme.colors.altOffWhite};
+    border-radius: ${({ theme }) => theme.spacing.sm};
   }
 
   /* Handle */

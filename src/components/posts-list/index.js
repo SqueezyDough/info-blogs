@@ -19,7 +19,7 @@ const PostsList = ({ className, posts, category, strokePosition, size = 'large' 
   return (
     <div className={className}>
       <BlockHeading title={category} strokePosition={strokePosition} />
-      <ol style={{ listStyle: 'none' }}>
+      <ol id='container' style={{ listStyle: 'none' }}>
         {posts.map(post => (
           <Blogpost key={post.fields.slug} post={post} size={size} />
         ))}

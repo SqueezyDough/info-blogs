@@ -6,6 +6,7 @@ export const baseStyling = () => {
     align-items: center;
     white-space: nowrap;
     position: relative;
+    z-index: 5;
     width: 4rem;
     min-width: 4rem;
     border: ${({ theme }) => `${theme.spacingM} solid ${theme.tertiaryColor}`};

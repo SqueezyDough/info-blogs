@@ -10,6 +10,7 @@ export const baseStyling = () => {
     article {
       margin: 0;
       width: 20.5rem; 
+      box-shadow: -3rem 0 1rem 0 #00000020;
       border-radius: ${({ theme }) => `0 ${theme.spacingL} ${theme.spacingM} ${theme.spacingM}`}; 
     }
     
@@ -65,6 +66,7 @@ export const baseStyling = () => {
 export const StyledLarge = () => {
   return css`
     article {
+      min-height: 25rem;
       background-image: ${({ theme }) => theme.primaryGradient};  
       color: ${({ theme }) => theme.secondaryColorDark}; 
     } 
@@ -88,7 +90,7 @@ export const StyledLarge = () => {
 export const StyledSmall = () => {
   return css`
     article {
-      max-height: 16rem; 
+      height: 16rem; 
       background-image: ${({ theme }) => theme.secondaryGradient};  
       color: ${({ theme }) => theme.primaryColorDark}; 
     } 

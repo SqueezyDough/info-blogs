@@ -42,7 +42,7 @@ const BlogIndex = ({ data, location }) => {
       <section className='main-content'>
         <PostsList posts={projects} category='Projects' strokePosition='left' />
 
-        <div class='styled-wrapper'>
+        <div className='styled-wrapper'>
           <PostsList posts={topics} category='Topics' size='small' strokePosition='top' />
         </div>
 

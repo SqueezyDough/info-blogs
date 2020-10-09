@@ -30,18 +30,4 @@ const PostsList = ({ className, posts, category, strokePosition, size = 'large' 
 
 export default styled(PostsList)`
   ${baseStyling}
-
-  ${BlockHeading} {
-    h2 {
-      
-
-      @media(${({ theme }) => `min-width: ${theme.screens.sm}`}) {
-
-      }
-    }
-  }
-
-  p {
-    padding: ${({ theme }) => theme.spacingS};
-  }
 `

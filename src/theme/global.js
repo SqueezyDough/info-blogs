@@ -50,6 +50,27 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  /* width */
+  ::-webkit-scrollbar {
+    width: ${({ theme }) => theme.spacing.sm};
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors.altOffWhite};
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-image: ${({ theme }) => theme.gradients.primary};
+    border-radius: ${({ theme }) => theme.spacing.sm};
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${({ theme }) => theme.colors.tertiary};
+  }
+
   .styled-wrapper {
     width: 110%;
     margin-left: -5%;

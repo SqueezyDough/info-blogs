@@ -10,8 +10,8 @@ export const baseStyling = () => {
     article {
       margin: 0;
       width: 20.5rem; 
-      box-shadow: -3rem 0 1rem 0 #00000020;
-      border-radius: ${({ theme }) => `0 ${theme.spacingL} ${theme.spacingM} ${theme.spacingM}`}; 
+      box-shadow: -3em 0 1rem 0 #00000020;
+      border-radius: ${({ theme }) => `0 ${theme.spacing.lg} ${theme.spacing.md} ${theme.spacing.md}`}; 
     }
     
     h2 {
@@ -20,7 +20,7 @@ export const baseStyling = () => {
     }
 
     h6 {
-      margin: ${({ theme }) => `${theme.spacingL} 0 ${theme.spacingS}`};  
+      margin: ${({ theme }) => `${theme.spacing.sm} 0 ${theme.spacing.sm}`};  
       text-transform: uppercase;
     }
   
@@ -66,7 +66,7 @@ export const baseStyling = () => {
 export const StyledLarge = () => {
   return css`
     article {
-      height: 24.5rem;
+      height: 22.5rem;
       background-image: ${({ theme }) => theme.primaryGradient};  
       color: ${({ theme }) => theme.secondaryColorDark}; 
     } 

@@ -11,7 +11,7 @@ export const baseStyling = () => {
 
     ol {
       display: flex;
-      margin: ${({ theme }) => `${theme.spacing.sm} 0 0 -${theme.spacing.xl}`};
+      margin: ${({ theme }) => `0 0 0 -${theme.spacing.xl}`};
       padding: ${({ theme }) => `${theme.spacing.md} 0 0 ${theme.spacing.xl}`};
       overflow-x: scroll;
       overflow-y: hidden;

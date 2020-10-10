@@ -5,7 +5,7 @@ export const baseStyling = () => {
     display: flex;
     flex-direction: column;
     height: 100%;
-    max-height: 23rem;
+    max-height: 21rem;
     width: 12rem;
     margin-left: -12rem;
     position: relative;

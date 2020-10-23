@@ -36,11 +36,11 @@ export const fontSize = as => {
     case 'h2':
       return '36px'
     case 'h3':
-      return '36px'
-    case 'h4':
       return '24px'
-    case 'h5':
+    case 'h4':
       return '20px'
+    case 'h5':
+      return '18px'
     case 'h6':
       return '16px'
     default:

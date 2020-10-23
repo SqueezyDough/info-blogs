@@ -25,16 +25,25 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1 itemProp='headline'>{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
+        {post.frontmatter.intro ? (
+          <section>
+            <p>{post.frontmatter.intro}</p>
+          </section>
+        ) : (
+          null
+        )}
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp='articleBody'
         />
-        <hr />
-        <footer>
+        <br />
+        <br />
+        <br />
+        {/* <footer>
           <Intro />
-        </footer>
+        </footer> */}
       </article>
-      <nav className='blog-post-nav'>
+      {/* <nav className='blog-post-nav'>
         <ul
           style={{
             display: 'flex',
@@ -59,7 +68,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </Layout>
   )
 }
@@ -81,6 +90,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        intro
       }
     }
   }

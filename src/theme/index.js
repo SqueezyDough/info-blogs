@@ -25,7 +25,8 @@ export const theme = {
     md: '2rem',
     lg: '4rem',
     xl: '6rem',
-    xxl: '8rem'
+    xxl: '8rem',
+    xxxl: '12rem'
   },
 
   screens: {
@@ -51,13 +52,14 @@ export const theme = {
     primary: '#0e9ba8',
     primaryDark: '#1c676f',
     secondary: '#33a0ab',
-    secondaryDark: '#b22031',
+    secondaryDark: '#1c676f',
     tertiary: '#FF334B',
     tertiaryDark: '#b22031',
     offWhite: '#E9E1D1',
     offWhiteDark: '#D6D1C4',
     offWhiteLight: '#F3F0E9',
-    altOffWhite: '#DCD4C1'
+    altOffWhite: '#DCD4C1',
+    black: '#000'
   },
 
   primaryGradient: 'linear-gradient(-180deg, #FF687A 5%, #EF3E53 97%)',

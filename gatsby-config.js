@@ -42,6 +42,7 @@ module.exports = {
           components: './components',
           elements: './elements',
           theme: './theme',
+          images: './dev-assets/images',
           svg: './dev-assets/svg',
           fonts: './fonts'
         }

@@ -31,16 +31,31 @@ const PostsList = ({ className, posts, category, strokePosition, size = 'large' 
 export default styled(PostsList)`
   ${baseStyling}
 
+  ${props =>
+    props.category === 'Projects' && css`  
+      ol {
+        &::-webkit-scrollbar-track {
+          background: ${({ theme }) => theme.colors.offWhiteLight};
+        }
+      
+        &::-webkit-scrollbar-thumb {
+          background-color: ${({ theme }) => theme.colors.altOffWhite};
+          background-image: none;
+        }
+      } 
+    `};
+  }
 
   ${props =>
     props.category === 'Topics' && css`  
       ol {
         &::-webkit-scrollbar-track {
-          background: ${({ theme }) => theme.colors.offWhite};
+          background: ${({ theme }) => theme.colors.offWhiteLight};
         }
       
         &::-webkit-scrollbar-thumb {
-          background-image: ${({ theme }) => theme.gradients.secondary};
+          background-color: ${({ theme }) => theme.colors.offWhite};
+          background-image: none;
         }
       } 
     `};

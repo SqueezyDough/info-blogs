@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from 'components/layout'
 import SEO from 'components/seo'
 import PostsList from 'components/posts-list'
+import Blogpost from 'components/blogpost'
 import Stroke from 'components/stroke'
 import { theme } from 'theme'
 
@@ -11,9 +12,10 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
   const projects = posts.filter(post => post.fields.slug.includes('projects'))
   const topics = posts.filter(post => post.fields.slug.includes('topics'))
+  const highlights = posts.filter(post => post.frontmatter.highlight)
 
   const stroke = {
-    color: theme.primaryColorDark,
+    color: theme.colors.tertiary,
     yAxis: {
       start: true
     },
@@ -40,10 +42,18 @@ const BlogIndex = ({ data, location }) => {
       <SEO title='All posts' />
 
       <section className='main-content'>
-        <PostsList posts={projects} category='Projects' strokePosition='left' />
+        {/* {highlights ? (
+          <div className='styled-wrapper -highlight'>
+            <Blogpost post={highlights[0]} size='highlight' />
+          </div>
+        ) : (
+          null
+        )} */}
+
+        <PostsList posts={projects} category='Projects' />
 
         <div className='styled-wrapper'>
-          <PostsList posts={topics} category='Topics' size='small' strokePosition='top' />
+          <PostsList posts={topics} category='Topics' size='small' />
         </div>
 
         <Stroke className='main-content__stroke' stroke={stroke} />
@@ -71,6 +81,9 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          highlight {
+            image,
+          },
           tags
           site { 
             url 

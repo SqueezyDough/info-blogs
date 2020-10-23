@@ -11,7 +11,7 @@ import { baseStyling } from './styles'
 const Footer = ({ className }) => {
   return (
     <footer className={className}>
-      <Heading as='h3'>
+      <Heading as='h2'>
         Wanna collaborate?
       </Heading>
 

@@ -3,19 +3,40 @@ import { css } from 'styled-components'
 export const baseStyling = () => {
   return css`
     display: flex;
+    position: relative;
+    z-index: 1;
     padding: ${({ theme }) => theme.spacing.lg} 0;
-
-    @media(min-width: ${({ theme }) => theme.screens.lg}) {
-      width: calc(100% - ${({ theme }) => theme.spacing.lg});
-    }
+    margin: ${({ theme }) => theme.spacing.lg} 0;
 
     ol {
       display: flex;
-      margin: ${({ theme }) => `0 0 0 -${theme.spacing.xl}`};
-      padding: ${({ theme }) => `${theme.spacing.md} 0 0 ${theme.spacing.xl}`};
+      width: 100%;
+      margin: 0;
+      padding: ${({ theme }) => `${theme.spacing.md} 0 0 0`};
       overflow-x: scroll;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
+
+      li {       
+        &:first-of-type article {
+          box-shadow: -1rem 0 1rem 0 #00000020;
+        }
+      }
+
+      &::after {
+        content: none;
+        position: absolute;
+        z-index: 1;
+        margin-top: -1rem;
+        right: 0;
+        width: ${({ theme }) => theme.spacing.lg};  
+        height: calc(100% + 2rem);  
+        background: linear-gradient(to left, ${({ theme }) => theme.colors.tertiary}, transparent 8rem);
+      
+        @media(min-width: ${({ theme }) => theme.screens.lg}) {
+          content: '';
+        }
+      }
 
       @media(min-width: ${({ theme }) => theme.screens.lg}) and (hover: hover) {
         padding-bottom: 1rem; 
@@ -29,7 +50,7 @@ export const baseStyling = () => {
           }
 
           &:last-of-type {
-            padding-right: ${({ theme }) => theme.spacing.xs};
+            padding-right: ${({ theme }) => theme.spacing.sm};
           }
   
           &:hover {

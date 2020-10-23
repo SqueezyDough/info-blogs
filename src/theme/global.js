@@ -74,7 +74,7 @@ const GlobalStyle = createGlobalStyle`
 
   .global-wrapper {
     margin: ${({ theme }) => theme.spacing.sm} auto;
-    max-width: 82rem;
+    max-width: 90rem;
     overflow-x: hidden;
     padding: 0;
 
@@ -88,11 +88,31 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .styled-wrapper {
+    position: relative;
     width: 110%;
     margin-left: -5%;
     padding: ${({ theme }) => `0 5% ${theme.spacingXL}`};
     background-color: ${({ theme }) => theme.altOffWhite};
     border-radius: ${({ theme }) => `${theme.spacingXL} 0 ${theme.spacingXL} 0`};
+
+    &.-highlight {
+      width: 45rem;
+      padding: ${({ theme }) => `0 5% ${theme.spacing.sm}`};
+      margin: ${({ theme }) => `${theme.spacing.lg} 0 ${theme.spacing.xxl} -5%`}; 
+      border-radius: ${({ theme }) => `${theme.spacingXL} ${theme.spacingXL} ${theme.spacingXL} 0`};
+    
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        bottom: -${({ theme }) => theme.spacing.lg};
+        width: ${({ theme }) => theme.spacing.lg};  
+        height: ${({ theme }) => theme.spacing.lg};  
+        background-color: ${({ theme }) => theme.colors.altOffWhite};
+        border-radius: ${({ theme }) => `0 0 0 ${theme.spacing.lg}`}; 
+      }
+    }
   }
 
   .main-content {
@@ -100,7 +120,7 @@ const GlobalStyle = createGlobalStyle`
     z-index: 1;
 
     > .stroke-container {
-      z-index: 100;
+      z-index: 0;
     }
 
     &__stroke {

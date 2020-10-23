@@ -9,7 +9,8 @@ import Tag from 'elements/tag'
 import {
   baseStyling,
   StyledLarge,
-  StyledSmall
+  StyledSmall,
+  StyledHighlight
 } from './styles'
 
 const Blogpost = ({ className, post, size = 'large' }) => {
@@ -27,12 +28,33 @@ const Blogpost = ({ className, post, size = 'large' }) => {
         itemType='http://schema.org/Article'
       >
         <header>
-          <Heading as='h2'>
-            <span itemProp='headline'>&mdash; {title}</span>
-          </Heading>
+          {size === 'highlight' ? (
+            <Heading as='h2'>
+              <span itemProp='headline'>&mdash; Highlight</span>
+            </Heading>
+          ) : (
+            <Heading as='h2'>
+              <span itemProp='headline'>&mdash; {title}</span>
+            </Heading>
+          )}
+
         </header>
         <div className='blogpost__content'>
+          {size === 'highlight' ? (
+            <Heading as='h3'>
+              <span itemProp='headline'>{title}</span>
+            </Heading>
+          ) : (
+            null
+          )}
+
           <section className='blogpost__body'>
+            {/* {size === 'highlight' ? (
+              <Image />
+            ) : (
+              null
+            )} */}
+
             {size === 'large' ? (
               <Text
                 size='large'
@@ -64,7 +86,7 @@ const Blogpost = ({ className, post, size = 'large' }) => {
       </article>
 
       {post.frontmatter.site ? (
-        <SiteRef site={post.frontmatter.site} />
+        <SiteRef className='site-ref' site={post.frontmatter.site} />
       ) : (
         null
       )}
@@ -81,6 +103,8 @@ export default styled(Blogpost)`
         return StyledLarge
       case 'small':
         return StyledSmall
+      case 'highlight':
+        return StyledHighlight
       default:
         return StyledLarge
     }
